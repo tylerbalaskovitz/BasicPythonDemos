@@ -1,7 +1,8 @@
-from selenium import webdriver
+from selenium import webdriver, Keys
+
 
 #gives access to using the keyboard for automation
-from selenium.webdriver.common.keys import Keys
+
 import time
 
 PATH = "/home/tyler/Documents/WebDriver/chromedriver"
