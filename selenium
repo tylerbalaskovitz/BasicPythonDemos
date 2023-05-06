@@ -1,0 +1,15 @@
+from selenium import webdriver
+import time
+
+PATH = "/home/tyler/Documents/WebDriver/chromedriver"
+
+#First thing to always do is determine the driver of and the corresponding browser.
+driver = webdriver.Chrome(PATH)
+
+driver.get("https://www.techwithtim.net")
+
+print(driver.title)
+
+time.sleep(3)
+
+driver.quit()

@@ -1,4 +1,5 @@
 import random
+import selenium
 
 #this by default will take a string even if it is a number, so it needs to be parsed into an int via the int method.
 maximumNumberSize = input("Type a number: ")
@@ -17,4 +18,5 @@ randomNumber = random.randint(0, maximumNumberSize)
 print(randomNumber)
 
 while True:
-    print("hello")
+    userGuess = input("Can you guess a number: ")
+    break #stops the loop when the line is reached
