@@ -19,18 +19,18 @@ driver.get("https://www.techwithtim.net")
 print(driver.title)
 
 search = driver.find_element("name", "s")
-search.send_keys("test")
-search.send_keys(Keys.RETURN)
+search.send_keys("test" + Keys.RETURN)
+
 
 try:
     main = WebDriverWait(driver, 10).until(
         EC.presence_of_element_located((By.ID, "main"))
     )
-    articles = driver.find_element("tag", "article")
+    articles = main.find_elements(By.TAG_NAME, "article")
     for article in articles:
-        header = article.find_elements("class", "entry-summary")
+        header = article.find_element(By.CLASS_NAME, "entry-summary")
         print(header.text)
-except:
+finally:
     driver.quit()
 
 
@@ -40,7 +40,7 @@ except:
 #the older version of sleneium had a method for each element type, now you type the type of method, id, name, class etc. as the first parameter and then the name of
 #the element in the second one. 
 #main = driver.find_element("id", "main")
-print(main.text)
+#print(main.text)
 
 time.sleep(3)
 
