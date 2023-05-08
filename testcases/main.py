@@ -15,6 +15,10 @@ class PythonOrgSearch(unittest.TestCase):
         print("Test")
         assert False
 
+    def test_title(self):
+        mainPage = page.MainPage()
+        assert mainPage.is_title_matches()
+
     #Since this doesn't start with test_* it will not be executed with the class being tested
     def not_a_test(self):
         print("this won't print")    
